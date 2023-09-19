@@ -6,7 +6,7 @@ from models.parameters import Parameters
 class ParametersManager:
 
     def __init__(self):
-        self.filename = '/Users/macbookair/PycharmProjects/Hillel-2_0/Hillel-2_0/data/hw.csv'
+        self.filename = 'data/hw.csv'
 
     def read(self):
         with open(self.filename, newline='') as csvfile:

@@ -1,8 +1,9 @@
 import requests
-from parameters_manager import ParametersManager
-from flask import Flask, render_template, request
 from faker import Faker
+from flask import Flask, render_template, request
 from markupsafe import escape
+
+from parameters_manager import ParametersManager
 
 app = Flask(__name__)
 
@@ -14,7 +15,7 @@ def hello():
 
 @app.route('/requirements')
 def read_txt():
-    path = '/Users/macbookair/PycharmProjects/Hillel-2_0/Hillel-2_0/requirements.txt'
+    path = 'requirements.txt'
     with open(path, 'r') as file:
         content = file.read()
     return render_template('requirements.html', content=content)
